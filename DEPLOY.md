@@ -64,10 +64,16 @@ Wait ~2 minutes for packages to install.
 4. Replace `your_api_key_here` with your actual key:
 
 ```
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
+```
+
+You can also use Anthropic instead:
+
+```
 ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxx
 ```
 
-You can also use the alias:
+Or the Anthropic alias:
 
 ```
 FREE_API_KEY=sk-ant-xxxxxxxxxxxxxxxx
@@ -117,9 +123,17 @@ Replace `YOUR_USERNAME` with your GitHub username.
 2. Click **"Add New Project"**
 3. Find your `mindpause` repo → Click **"Import"**
 4. Before clicking Deploy → click **"Environment Variables"**
-5. Add:
+5. Add one of these:
+   - **Name:** `OPENAI_API_KEY`
+   - **Value:** your OpenAI key (sk-...)
+
+   Or use Anthropic instead:
    - **Name:** `ANTHROPIC_API_KEY`
-   - **Value:** your key (sk-ant-...)
+   - **Value:** your Anthropic key (sk-ant-...)
+
+   Or use the Anthropic alias:
+   - **Name:** `FREE_API_KEY`
+   - **Value:** your Anthropic key
 6. Click **"Deploy"** 🚀
 
 Wait ~2 minutes. Vercel gives you a free URL like:
